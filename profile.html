@@ -28,15 +28,17 @@
                 <li><a class="dropdown-item" href="index.html">Log out</a></li>
               </ul>
         </div>
+
+
           <button class="navbar-toggler ms-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse ms-lg-5 ps-lg-5" id="navbarNavAltMarkup">
             <div class="navbar-nav ms-lg-4">
               <a class="nav-link" aria-current="page" href="home.html">HOME</a>
-              <a class="nav-link" href="rooms.html">ROOM</a>
+              <a class="nav-link active" href="rooms.html">ROOM</a>
               <a class="nav-link" href="gallery.html">GALLERY</a>
-              <a class="nav-link active" href="about.html">ABOUT</a>
+              <a class="nav-link" href="about.html">ABOUT</a>
               <a class="nav-link" href="contact.html">CONTACT US</a>  
             </div>
           </div>
@@ -44,30 +46,79 @@
       </nav>
       <!-- navbar end -->
   <div class="mt-5">&nbsp;</div>
-  <section class="container pt-5 pb-5">
+  <section class="container my-5">
     <div>
-      <center>
-        <hr>
-        <h1>About Us</h1>
-      </center>
-    </div>
-    <div class="row">
-      <div class="col text-justify text-center fst-italic pt-5 m-5">
-        <h5 >
-          “Oriyami's Hotel, an urban escape for nature lovers, offers diverse hotel activities amidst Valenzuela City's stunning vistas. With a well-equipped game room, exquisite dining, and adaptable meeting spaces, guests can unwind while exploring the serene beauty of the surroundings. Discover Oriyami's oasis at https://www.oriyami.com/."
-          Lorem ipsum dolor sit amet, consectetur adipisiciimg elit. Nobis eaque, esse, sapiente accusantium nisi repellat sint quaerat reiciendis iste porro, magnam veritatis autem modi voluptatum!
-        </h5>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum architecto cupiditate animi labore dolor? Amet eligendi dolorem cupiditate ab tenetur qui debitis voluptatem non officiis unde at, rerum suscipit modi autem, maxime aperiam cum eveniet! Asperiores obcaecati sint, atque quos a doloremque odit iste alias magni tempore non? Delectus, impedit!</p>
+        <center>
+          <hr>
+          <h1>Profile</h1>
+        </center>
+      </div>
+    <div class="row mt-5 justify-content-evenly">
+        <div class="col-lg-4 col-md-12 mb-5 shadow pb-5"><h5 class="mt-3">Profile Picture
+            </h5><center><img src="assets/image/avatar.png" style="width:70%;" alt=""></center>
+            <input type="file" class="form-control mt-3" id="inputGroupFile01">
+            <button class="btn btn-blue mt-2" style="float: right;" data-bs-toggle="modal" data-bs-target="#change" data-bs-dismiss="modal">Save Changes</button>
         </div>
-      <div class="col col-lg-6 col-12 mt-5 d-flex justify-content-center"><img class="img-fluid" src="assets/image/imgabout.png" alt=""></div>
+        <div class="col-lg-7  col-md-12 shadow pb-3">
+            <h5 class="mt-3">Basic information</h5>
+            <div class="row">
+                <div class="mb-3 mt-5 col-6">
+                <label for="name" class="form-label">Name</label>
+                <input type="text" class="form-control" id="email" placeholder="Mark Vincent Capiral">
+            </div>
+            <div class="mb-3 mt-5 col-6">
+              <label for="gender" class="form-label">Gender</label>
+                <select class="form-select" aria-label="Default select example" id="gender">
+                    <option >Select</option>
+                    <option value="1" selected>Male</option>
+                    <option value="2">Female</option>
+                </select>          
+            </div>
+            <div class="mb-3 col-6">
+              <label for="num" class="form-label">Phone Number</label>
+              <input type="number" class="form-control" id="number" placeholder="09999999999">
+            </div>
+            <div class="mb-3 col-6">
+              <label for="email" class="form-label">Email address</label>
+              <input type="email" class="form-control" id="email" placeholder="Please enter your email">
+            </div>
+        </div>
+        <button class="btn btn-blue" style="float: right;" data-bs-toggle="modal" data-bs-target="#change" data-bs-dismiss="modal">Save Changes</button>
+        <h5 class="mt-5 mb-3">Change Password
+        </h5>
+        <div class="row">
+            <div class="mb-3 col-4">
+                <label for="password1" class="form-label">Old Password</label>
+                <input type="password" class="form-control" id="password1" placeholder="Enter your Old Password">
+            </div>
+            <div class="mb-3 col-4">
+                <label for="password2" class="form-label">New Password</label>
+                <input type="password" class="form-control" id="password2" placeholder="Enter your New Password">
+            </div>
+            <div class="mb-3 col-4">
+                <label for="password3" class="form-label">Confirm Password</label>
+                <input type="password" class="form-control" id="password3" placeholder="Enter your New Password">
+            </div>
+        </div>
+        <button class="btn btn-blue" style="float: right;" data-bs-toggle="modal" data-bs-target="#change" data-bs-dismiss="modal">Save Changes</button>
     </div>
-  </section>
+    </div>
+    <div class="modal shadow-none modals fade" id="change" tabindex="-1" aria-labelledby="submit" aria-hidden="true">
+        <div class="modal-dialog modal-sm modal-dialog-centered">
+          <div class="modal-content bg-primary text-white"> 
+            <div class="modal-body row pb-0">
+              <h5 class="col-10 modal-title" id="exampleModalLabel text-center"><p>"Saved Changes" </p></h5>
+              <button type="button" class="btn-close col-2" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+          </div>
+        </div>
+      </div>
+</section> 
   <!-- feedback start -->
   <div class="position-fixed position-fixed end-0  p-3 messege"><a data-bs-toggle="modal" data-bs-target="#messege"><img src="assets/image/feedback.png" alt=""></a></div>
-
   <div class="modal fade" id="messege" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content container">   
+      <div class="modal-content container">      
         <div class="modal-body">
             <center>
                 <img class="mb-2" src="assets/image/logo-icon.png" alt=""><span class="title-sign">Give Feedback</span>
@@ -144,6 +195,7 @@
         <button type="submit" class="btn btn-blue btn-subs">Subscribe</button>
     </form>
   </div>
+  
     </div>
     <hr class="hr">
   <p class="pb-2 m-0 f text-center">© Oriyami Hotel. All Rights Reserved 2024. Site optimized by SEO Direct</p>

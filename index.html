@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="assets/image/favicon.png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" type="text/less" href="assets/css/style.less">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -34,7 +35,6 @@
           </div>
         </div>
       </nav>
-
       <!-- Sign in Modal -->
       <div class="modal fade " id="login" tabindex="-1" aria-labelledby="login" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-lg ">
@@ -61,9 +61,9 @@
           </div>
         </div>
       </div>
-
+<!--Sign up  -->
       <div class="modal fade " id="signup" tabindex="-1" aria-labelledby="sign-up" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-lg ">
+        <div class="modal-dialog modal-dialog-centered modal-md ">
           <div class="container modal-content rounded">
             <div class="modal-body pb-5 mt-4">
             <center>
@@ -115,21 +115,17 @@
           </div>
         </div>
       </div>
-
       <div class="modal shadow-none modals fade" id="register" tabindex="-1" aria-labelledby="signFirst" aria-hidden="true">
         <div class="modal-dialog modal-sm modal-dialog-centered">
           <div class="modal-content bg-primary text-white"> 
             <div class="modal-body row pb-0">
               <h5 class="col-10 modal-title" id="exampleModalLabel text-center"><p>Register Successful</p></h5>
               <button type="button" class="btn-close col-2" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-           
+            </div>          
           </div>
         </div>
-      </div>
-      
+      </div>      
       <!-- navbar end -->
-
       <!-- home bg-img/swiper start -->
       <div class="container-fluid mt-5 pt-3">
         <div class="swiper mySwiper">
@@ -159,13 +155,11 @@
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <!-- dont remover keep near in swiper -->
   <!-- home bg-img/swiper end -->
-
   <!-- check availability start -->
 <section class="container availability-form">
     <div class="row">
         <div class="col-lg-12 shadow bg-white p-4 rounded">
-            <h5>Check Room Availability </h5>
-            
+            <h5>Check Room Availability </h5>            
                 <div class="row align-items-end">
                     <div class="col-lg-3 mb-2">
                         <label for="checkin" class="form-label" style="font-weight: 500;">Check in</label>
@@ -226,8 +220,6 @@
   </div>
 </div>
   <!-- check availability end -->
-
-
   <!-- rooms -->
   <section class="container">
     <div class="col-lg-3 " >
@@ -371,7 +363,6 @@
       </div> 
     </div>
     <center><a href="" class="btn btn-more my-5"  type="button" data-bs-toggle="modal" data-bs-target="#signFirst">View More</a></center>
-
 <!-- Modal -->
 <div class="modal shadow-none modals fade" id="signFirst" tabindex="-1" aria-labelledby="signFirst" aria-hidden="true">
   <div class="modal-dialog modal-sm modal-dialog-centered">
@@ -385,25 +376,23 @@
   </div>
 </div>
   </section>
-
-<section class="container pt-5">
-  <div>
-    <center>
-      <hr>
-      <h1>About Us</h1>
-    </center>
-  </div>
-  <div class="row">
-    <div class="col text-justify text-center fst-italic p-about">
-      <h5 >
-        “Oriyami's Hotel, an urban escape for nature lovers, offers diverse hotel activities amidst Valenzuela City's stunning vistas. With a well-equipped game room, exquisite dining, and adaptable meeting spaces, guests can unwind while exploring the serene beauty of the surroundings. Discover Oriyami's oasis at https://www.oriyami.com/."
-        Lorem ipsum dolor sit amet, consectetur adipisiciimg elit. Nobis eaque, esse, sapiente accusantium nisi repellat sint quaerat reiciendis iste porro, magnam veritatis autem modi voluptatum!
-      </h5>
+  <section class="container pt-5">
+      <div>
+        <center>
+          <hr>
+          <h1>About Us</h1>
+        </center>
       </div>
-    <div class="col col-lg-6 col-12 mt-5 d-flex justify-content-center"><img class="img-fluid" src="assets/image/imgabout.png" alt=""></div>
-  </div>
-</section>
-
+      <div class="row">
+        <div class="col text-justify text-center fst-italic p-about">
+          <h5 >
+            “Oriyami's Hotel, an urban escape for nature lovers, offers diverse hotel activities amidst Valenzuela City's stunning vistas. With a well-equipped game room, exquisite dining, and adaptable meeting spaces, guests can unwind while exploring the serene beauty of the surroundings. Discover Oriyami's oasis at https://www.oriyami.com/."
+            Lorem ipsum dolor sit amet, consectetur adipisiciimg elit. Nobis eaque, esse, sapiente accusantium nisi repellat sint quaerat reiciendis iste porro, magnam veritatis autem modi voluptatum!
+          </h5>
+          </div>
+        <div class="col col-lg-6 col-12 mt-5 d-flex justify-content-center"><img class="img-fluid" src="assets/image/imgabout.png" alt=""></div>
+      </div>
+  </section>
 <!-- Highlights -->
 <section class="container mt-5 pt-5 pb-5 mb-4">
   <div class="mt-5 mb-5 p-5">
@@ -420,7 +409,6 @@
         <p>Enjoy high-speed internet and cable television so you never miss a thing!</p>
       </center>
     </div>
-
     <div class="col-md-6 col-lg-4">
       <center>
         <img src="assets/image/BEST.png" alt="">
@@ -437,14 +425,11 @@
     </div>
   </div>
 </section>
-
   <!-- feedback start -->
   <div class="position-fixed position-fixed end-0  p-3 messege"><a data-bs-toggle="modal" data-bs-target="#messege"><img src="assets/image/feedback.png" alt=""></a></div>
-
   <div class="modal fade" id="messege" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content container">
-        
+      <div class="modal-content container">    
         <div class="modal-body">
             <center>
                 <img class="mb-2" src="assets/image/logo-icon.png" alt=""><span class="title-sign">Give Feedback</span>
@@ -469,13 +454,11 @@
         <div class="modal-body row pb-0">
           <h5 class="col-10 modal-title" id="exampleModalLabel text-center"><p>“Thanks so much for sharing your experience with us.”</p></h5>
           <button type="button" class="btn-close col-2" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-       
+        </div>    
       </div>
     </div>
   </div>
 <!-- feedback end -->
-
 <footer>
   <div class="container py-5">
     <div class="row">
@@ -514,7 +497,6 @@
           <li><a href="http://www.instagram.com" class="fa-brands fa-instagram"></a></li>
       </ul>    
   </div>
-
   <div class="col-12 col-md-6 col-xl-3 mt-sm-3 mt-md-0">
     <h5 class="row m-0 mb-2">Let's keep in touch</h5>
     <p>Sign up for our weekly email marketing newsletter and ORIYAMI updates.</p>
@@ -523,7 +505,6 @@
         <button type="submit" class="btn btn-blue btn-subs">Subscribe</button>
     </form>
   </div>
-  
     </div>
     <hr class="hr">
   <p class="pb-2 m-0 f text-center">© Oriyami Hotel. All Rights Reserved 2024. Site optimized by SEO Direct</p>
@@ -534,8 +515,5 @@
     <!-- bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script src="assets/js/script.js"></script>
-
-
-
 </body>
 </html>

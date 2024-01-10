@@ -12,6 +12,32 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Document</title>
+    <style>
+      .payment-options {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 20px;
+      }
+    
+      select {
+        margin: 10px 0;
+        padding: 5px;
+      }
+    
+      .selected-image {
+        width: 66px; /* Adjust image container size */
+        height: 39px; /* Adjust image container size */
+        border: 1px solid #ccc;
+        margin-top: 10px;
+      }
+    
+      .selected-image img {
+        width: 66pcpx;
+       height: 39px;
+        object-fit: contain;
+      }
+    </style>
 </head>
 <body>
     <!-- Navbar start -->
@@ -36,35 +62,133 @@
               <a class="nav-link" aria-current="page" href="home.html">HOME</a>
               <a class="nav-link" href="rooms.html">ROOM</a>
               <a class="nav-link" href="gallery.html">GALLERY</a>
-              <a class="nav-link active" href="about.html">ABOUT</a>
+              <a class="nav-link" href="about.html">ABOUT</a>
               <a class="nav-link" href="contact.html">CONTACT US</a>  
             </div>
           </div>
         </div>
       </nav>
       <!-- navbar end -->
-  <div class="mt-5">&nbsp;</div>
-  <section class="container pt-5 pb-5">
-    <div>
-      <center>
-        <hr>
-        <h1>About Us</h1>
-      </center>
-    </div>
-    <div class="row">
-      <div class="col text-justify text-center fst-italic pt-5 m-5">
-        <h5 >
-          “Oriyami's Hotel, an urban escape for nature lovers, offers diverse hotel activities amidst Valenzuela City's stunning vistas. With a well-equipped game room, exquisite dining, and adaptable meeting spaces, guests can unwind while exploring the serene beauty of the surroundings. Discover Oriyami's oasis at https://www.oriyami.com/."
-          Lorem ipsum dolor sit amet, consectetur adipisiciimg elit. Nobis eaque, esse, sapiente accusantium nisi repellat sint quaerat reiciendis iste porro, magnam veritatis autem modi voluptatum!
-        </h5>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum architecto cupiditate animi labore dolor? Amet eligendi dolorem cupiditate ab tenetur qui debitis voluptatem non officiis unde at, rerum suscipit modi autem, maxime aperiam cum eveniet! Asperiores obcaecati sint, atque quos a doloremque odit iste alias magni tempore non? Delectus, impedit!</p>
+<div class="mt-5">&nbsp;</div>
+<section class="container mt-5 pt-5 mb-5 pb-5">
+  <div class="row justify-content-around">
+    <div class="col-12 col-md-12 col-lg-7 mx-auto d-flex justify-content-center mb-5">
+      <div class="card shadow " style="width: 40rem;">
+        <div class="img-hover">
+          <img src="assets/image/room3.png" class="card-img-top img-hov image-fluid" alt="...">
         </div>
-      <div class="col col-lg-6 col-12 mt-5 d-flex justify-content-center"><img class="img-fluid" src="assets/image/imgabout.png" alt=""></div>
+        <div class="card-body">
+          <h6 class="card-title">Deluxe Premier</h6>
+          <p>Property Overview</p>
+          <div class="row">
+            <p class="col-2"><i class="fas fa-wifi"></i> WIFI</p>
+            <p class="col-4"><i class="fas fa-wind"></i> Air-Conditioner</p>
+            <p class="col-3"><i class="fas fa-tv"></i> Television</p>
+            <p class="col-3"><i class="fas fa-hot-tub"></i> Spa Suite</p>
+          </div>
+          <p>Guest <span class="badge">10</span></p>
+          <p>Price &nbsp; <span class="badge">₱ 4000</span></p>
+        </div>
+      </div>
     </div>
-  </section>
+    <div class="col-12 col-md-12 col-lg-5 mx-auto d-flex justify-content-center mb-5 mt-5">
+      <div class="card borderr-none shadow " style="width: 37rem; height: 20rem;">
+        <div class="card-body">
+          <h6 class="card-title">Reservation Details</h6>
+          <div class="row mt-4">
+            <div class="col-6 mb-2">
+              <label for="checkin" class="form-label" style="font-weight: 500;">Check in</label>
+              <input type="date" class="form-control shadow-none" id="checkin" value="2024-01-17">
+            </div>
+            <div class="col-6  mb-2">
+              <label for="checkout" class="form-label" style="font-weight: 500;">Check out</label>
+              <input type="date" class="form-control shadow-none" id="checkout"  value="2024-01-19">
+          </div>
+          </div>
+          <p class="mt-3">No. of Days: 3</p>
+          <p>Total Amount to pay:  ₱ 12000</p>
+          <a class="btn btn-blue btn-book mt-4" style="float:right" data-bs-toggle="modal" data-bs-target="#pay">Pay Now</a>       
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="modal fade" id="pay" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content container"> 
+      <div class="modal-body">
+          <center>
+              <img class="mb-2" src="assets/image/logo-icon.png" alt=""><span class="title-sign">Payment</span>
+          </center>  
+          <div class="payment-options">
+            <label for="payment">Select a Payment Option:</label>
+            <select id="payment" onchange="updateImage()">
+              <option value="default">Select an option</option>
+              <option value="option1">BDO</option>
+              <option value="option2">Master Card</option>
+              <option value="option3">visa</option>
+              <!-- Add more options as needed -->
+            </select>
+            <div class="selected-image" id="selectedImage"></div>
+          </div>
+          <script>
+            function updateImage() {
+              const selectElement = document.getElementById('payment');
+              const selectedOption = selectElement.value;
+              const selectedImage = document.getElementById('selectedImage');
+          
+              // Replace these paths with your actual image paths for each option
+              if (selectedOption === 'option1') {
+                selectedImage.innerHTML = '<img src="assets/image/bdo.png" alt="Option 1">';
+              } else if (selectedOption === 'option2') {
+                selectedImage.innerHTML = '<img src="assets/image/master.png" alt="Option 2">';
+              } else if (selectedOption === 'option3') {
+                selectedImage.innerHTML = '<img src="assets/image/visa.png" alt="Option 2">';
+              }else {
+                selectedImage.innerHTML = ''; // Clear the image if no option is selected
+              }
+            }
+          </script>
+          <div class="mb-3 mt-5 col-12">
+              <label for="email" class="form-label">Card Number</label>
+              <input type="email" class="form-control" id="email" placeholder="Please enter your Card Number">
+          </div>
+          <div class="mb-3 mt-2 col-12">
+            <label for="card" class="form-label">Card Holder Name</label>
+            <input type="text" class="form-control" id="card" placeholder="Please enter your Card Holder Name">
+        </div>
+        <div class="row mb-4">
+            <div class="mb-3 mt-2 col-6">
+            <label for="expiration">Expiration Date:</label>
+            <input type="month" id="expiration" name="expiration" min="2024-01" max="2050-12">    
+            </div>
+            <div class="mb-3 mt-2 col-6 ">
+                  <label for="cvc">CVC/CVV:</label>
+                <input type="password" id="cvc" name="cvc" minlength="3" maxlength="4" pattern="\d{3,4}" title="Please enter a 3 or 4 digit number">
+            </div>
+        </div>  
+          <button type="submit" class="btn btn-blue" data-bs-dismiss="modal" aria-label="Close"> Cancel</button>
+          <button type="submit" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#pay-success" data-bs-dismiss="modal">Checkout</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal shadow-none modals fade" id="pay-success" tabindex="-1" aria-labelledby="submit" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content bg-primary text-white"> 
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">"Your Payment Was Successful!"</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body row pb-0">
+        <p>"To view your reservation details, please check 'My Reservations' under the account section."</p>
+        </h5>   
+      </div>
+    </div>
+  </div>
+</div>
   <!-- feedback start -->
   <div class="position-fixed position-fixed end-0  p-3 messege"><a data-bs-toggle="modal" data-bs-target="#messege"><img src="assets/image/feedback.png" alt=""></a></div>
-
   <div class="modal fade" id="messege" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content container">   
@@ -93,7 +217,6 @@
           <h5 class="col-10 modal-title" id="exampleModalLabel text-center"><p>“Thanks so much for sharing your experience with us.”</p></h5>
           <button type="button" class="btn-close col-2" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
-       
       </div>
     </div>
   </div>
